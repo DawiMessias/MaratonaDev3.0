@@ -1,0 +1,67 @@
+header, main, footer {
+    text-align: center;
+}
+
+main .donors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+section.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 45px; 
+}
+
+form input,
+form button {
+    width: 100%;
+
+    margin-bottom: 4px;
+
+    box-sizing: border-box;
+
+    padding: 8px 16px; 
+
+    border-radius: 4px;
+    border: 1px red solid;
+}
+
+header, .form, main {
+    margin: 0 auto 70px;
+    width: 90%;
+    max-width: 500px;
+    
+}
+
+header button {
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+    padding: 16px;
+
+    border: 1px solid #eee;
+}
+
+header, h1, main, h2 {
+    margin-bottom: 50px;
+}
+
+.form h2 {
+    text-align: right;
+}

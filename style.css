@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+
 header, main, footer {
     text-align: center;
 }
@@ -7,11 +12,54 @@ main .donors {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.blood {
+    color:  #dd1a1a;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    justify-content: center;
+
+}
+
+.blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    border-radius: 50%;
+    border-top-right-radius: 0;
+
+    transform: rotate(-45deg);
+
+}
+
+.donor p {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
 section.form {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     grid-gap: 45px; 
+
+    align-items: center;
+
+    background-color: #dd1a1a;
+
+    padding: 16px 64px;
+
+    border-radius: 6px;
 }
 
 form input,
@@ -20,12 +68,24 @@ form button {
 
     margin-bottom: 4px;
 
-    box-sizing: border-box;
+
 
     padding: 8px 16px; 
 
-    border-radius: 4px;
-    border: 1px red solid;
+    border-radius: 8px;
+    border: 1px #ffffff88 solid;
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder {
+    color: #ffffffaa;
+}
+
+form button {
+    font-weight: bold;
 }
 
 header, .form, main {
@@ -36,8 +96,28 @@ header, .form, main {
 }
 
 header button {
+    margin-top: 16px;
     padding: 8px 16px;
+    
+
+    background-color: #dd1a1a;
+    color: white;
+
+    font-weight: bold;
+
     border-radius: 4px;
+    border: none;
+}
+
+
+.logo {
+    width: 120px;
+    margin: 70px;
+}
+
+header p {
+    font-size: 14px;
+
 }
 
 html, body {
@@ -49,6 +129,10 @@ body {
     flex-direction: column;
 
     height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f9f9f9;
 }
 
 footer {
@@ -62,6 +146,33 @@ header, h1, main, h2 {
     margin-bottom: 50px;
 }
 
+h1, h2 {
+    color: #000000cc;
+} 
+
+main h2 span {
+    color: #dd1a1a;
+}
+
 .form h2 {
     text-align: right;
+    color: #ffffffee;
+
+    font-size: 18px;
+}
+
+
+
+/* fazendo o button Quero doar sumir e aparecer */
+
+section.form {
+    transition: all 300ms;
+}
+
+section.form.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin-top: -70px;
+    
 }

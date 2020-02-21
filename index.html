@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
 
@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <img class="logo" src=".//MaratonaDev3/logo.png" alt="Doe">
+        <img class="logo" src="/logo.png" alt="Imagem da Doe">
 
         <h2>A sua doação importa</h2>
         <p>Salve até 3 vidas com 1 doação</p>
@@ -24,7 +24,7 @@
 
         <section class="form hide">
             <h2>Entre na lista de doadores</h2>
-            <form action="/">
+            <form action="/" method="POST">
                 <input type="text"
                  name="name"
                  placeholder="Nome completo">
@@ -45,27 +45,19 @@
         <h2>Últimos <span>doadores</span></h2>
 
         <section class="donors">
-            <div class="donor">
-                <div class="blood">B+</div>
-                <p>David Messias</p>
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Neusa Fabiana Messias</p>    
-            </div>
-            <div class="donor">
-                <div class="blood">A+</div>
-                <p>Lara Fabian Messias</p>
-            </div>
-            <div class="donor">
-                <div class="blood">B+</div>
-                <p>Daniel Carvalho Cardoso</p>
-            </div>
+
+            {% for donor in donors %}
+
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
+                </div>
+            {%endfor%}
         </section>
     </main>
 
     <footer> Com  ♥ David Messias </footer>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
     
 
 </body>
